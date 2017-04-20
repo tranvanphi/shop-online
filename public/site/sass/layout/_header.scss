@@ -1,0 +1,96 @@
+#page-header{
+	background-color:$primary-color;
+
+	.top-header{
+		margin-bottom: 5px;
+		.phone{
+			color:#fff;
+			margin-top:3px;
+			float: right;
+		}
+
+		.logo{
+			color:$light-font-color;
+		}
+
+		.icon-search{
+			background-color:#fff;
+			color:#ccc;
+			border-right:none;
+		}
+
+		.input-search{
+			border-left:none;
+		}
+
+		.span-button{
+			background-color:$light-font-color;
+			border-radius:0 3px 3px 0;
+			padding:0px 10px;
+
+			.button-search{
+				background-color: transparent;
+				font-size: 16px;
+				border:none;
+				font-weight: 600;
+				transition: color 0.3s ease;
+				color:$primary-color;	
+
+				&:hover{
+					color:#fff;
+				}
+			}
+		}
+
+		.cart{
+			background-color:$secondary-color;
+			font-weight: 600;
+			font-size: 15px;
+			color:#cca300;
+		}
+	}
+
+	.navbar-default-custom{
+		background-color:#29a8d6;
+		border-radius:0px;
+		min-height: 43px;
+		@include add-border(1px,#999966,'top-bottom');
+	
+		.navbar-collapse-custom{
+			background-color:#29a8d6;
+			li>a {
+				padding:10px 30px;
+				font-weight: 500;
+				font-size:16px;
+				color:$secondary-font-color;
+			}
+
+			ul.dropdown-menu{
+				background-color:#29a8d6;
+			}
+		}
+	}
+
+
+}
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover {
+	background-color:$primary-color;
+	color:$light-font-color !important;
+}
+.navbar-default .navbar-nav>li>a:hover{
+	background-color:$primary-color;
+	color:$light-font-color !important;
+}
+
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.open>a:focus, 
+.navbar-default .navbar-nav>.open>a:hover{
+	background-color:$primary-color;
+}
+
+.navbar-default .navbar-nav .dropdown-menu>li>a:focus, 
+.navbar-default .navbar-nav .dropdown-menu>li>a:hover {
+	background-color:$primary-color;
+}

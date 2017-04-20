@@ -1,0 +1,19 @@
+body{
+	margin:0px;
+	padding:0px;
+	font-family:$base-font-family;
+	font-size:$base-font-size;
+	line-height:1.7em;
+	color:$primary-font-color;
+}
+
+ul,li{
+	list-style:none;
+	padding:0px;
+	margin:0px;
+}
+
+.clear{
+	clear:both;
+}
+
