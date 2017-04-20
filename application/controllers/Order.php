@@ -85,14 +85,14 @@ class Order extends MY_Controller
 					$this->Order_model->addOrder($data);
 				}
 				//delete carts
-				// $this->cart->destroy();
+				$this->cart->destroy();
 				$this->session->set_flashdata('message','ban da dat hang thanh cong');
 				redirect(base_url());
 			}
 
 		}
 		
-		
+		$this->data['title'] 		= 'Thanh toán';
 		$this->data['cart'] = $carts;
 		$this->data['temp']	= 'site/order/checkout';
 		$this->load->view('site/layout', $this->data);

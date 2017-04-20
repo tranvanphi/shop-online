@@ -12,7 +12,7 @@
     <!-- Header Tiles -->
     <div class="row">
         <div class="col-sm-6 col-md-6">
-            <a class="block block-link-hover3 text-center" href="<?php echo Admin_url('admin/formAction')?>">
+            <a class="block block-link-hover3 text-center" href="#">
                 <div class="block-content block-content-full">
                     <div class="h1 font-w700 text-success"><i class="fa fa-plus"></i></div>
                 </div>

@@ -9,9 +9,9 @@ $img1 = $imageList[$arrayKeys[0]];
             <div class="swiper-container">
             	<div class="swiper-wrapper"> 
 	            	<?php 
-						if(is_array($imageList)):
-						foreach ($imageList as $img):
-					?>
+      						if(is_array($imageList)):
+      						foreach ($imageList as $img):
+      					?>
 	                  <a class="swiper-slide" href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: '<?php echo base_url('uploads/product/').$img?>',largeimage: '<?php echo base_url('uploads/product/').$img?>'}"><img class="img-thumb-test" src="<?php echo base_url('uploads/product/').$img?>"></a>
 	               	<?php 
 						endforeach;
@@ -30,7 +30,7 @@ $img1 = $imageList[$arrayKeys[0]];
          </div>
       </div>            
    </div>
-
+    
    <div class="col-sm-7">
       <div class="item-box"> 
          <h1 class="name-product"><?php echo $product->name?></h1>
@@ -45,13 +45,13 @@ $img1 = $imageList[$arrayKeys[0]];
                      <div class="col-sm-6"></div>
                   </div>
                   <?php 
-						if($product->discount > 0)
-						{ 
-							$priceNew = $product->price - $product->discount;
-						}else{
-							$priceNew = $product->price;
-						}
-					?>
+        						if($product->discount > 0)
+        						{ 
+        							$priceNew = $product->price - $product->discount;
+        						}else{
+        							$priceNew = $product->price;
+        						}
+        					?>
                   <p>giá sản phẩm: <?php echo number_format($priceNew);?> đ</p>
                   <p>Số lượt xem: <?php echo $product->view;?></p>
                   <p>bảo hành: <?php echo $product->warranty;?></p>
@@ -69,6 +69,9 @@ $img1 = $imageList[$arrayKeys[0]];
             <div class="col-sm-5"></div>
          </div>
       </div>
+   </div>
+   <div class="col-md-12">
+    <?php //echo $product->content;?>
    </div>
    
    <div class="col-md-12">
@@ -95,7 +98,18 @@ $img1 = $imageList[$arrayKeys[0]];
                                 </div>
 
                                 <div class="caption">
-                                    <h3><?php echo $row->name?></h3>
+                                    <h3>
+                                      <?php 
+                                          if(strlen($row->name) > 18)
+                                          {
+                                              $name = substr($row->name,0,18).'...';
+                                          }else{
+                                              $name = $row->name;
+                                          }
+                                      ?>
+                                      <?php echo $name?>
+                                          
+                                  </h3>
                                     <?php if($row->discount > 0):?>
                                     <?php $priceNew = $row->price - $row->discount;?>
                                         <p class="price">Giá mới: <?php echo number_format($priceNew)?> đ</p>

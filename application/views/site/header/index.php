@@ -40,7 +40,7 @@
          <div id="navbar" class="navbar-collapse collapse navbar-collapse-custom">
             <ul class="nav navbar-nav">
                <li class="active"><a href="<?php echo base_url()?>">Trang chủ</a></li>
-               <li><a href="<?php echo base_url('about')?>">Giới thiệu</a></li>
+               <li><a href="#">Giới thiệu</a></li>
                <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sản phẩm <span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -49,7 +49,7 @@
                   <?php endforeach;?>   
                   </ul>
                </li>
-               <li><a href="<?php echo base_url('new')?>">Tin tức</a></li>
+               <li><a href="#">Tin tức</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                <?php if(!isset($userInfo)):?>

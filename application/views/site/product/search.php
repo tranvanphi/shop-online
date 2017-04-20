@@ -39,7 +39,7 @@
             <div class="panel-heading">
                <h3 class="panel-title">Kết quả "<?php echo $search?>"</h3>
             </div>
-            <div class="panel-body">
+            <div class="panel-body3">
                <div class="row">
                 <?php foreach($productList as $row):?>
                             <?php 
@@ -60,7 +60,18 @@
                         
                         <div class="caption">
                         <a href="<?php echo base_url('product/view/').$row->id;?>">
-                            <h3><?php echo $row->name?></h3>
+                            <h3>
+                                <?php 
+                                    if(strlen($row->name) > 18)
+                                    {
+                                        $name = substr($row->name,0,18).'...';
+                                    }else{
+                                        $name = $row->name;
+                                    }
+                                ?>
+                                <?php echo $name?>
+                                    
+                            </h3>
                             <?php if($row->discount > 0):?>
                             <?php $priceNew = $row->price - $row->discount;?>
                                 <p class="price">Giá mới: <?php echo number_format($priceNew)?> đ</p>

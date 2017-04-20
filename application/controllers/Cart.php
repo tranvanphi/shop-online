@@ -11,6 +11,7 @@ Class Cart extends MY_Controller
 		$cart = $this->cart->contents();
 		$this->data['cart'] = $cart;
 
+		$this->data['title'] 		= 'Giỏ hàng';
 		$this->data['temp'] = 'site/cart/index';
 		$this->load->view('site/layout',$this->data);
 	}

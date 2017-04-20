@@ -10,4 +10,4 @@
 
 <link rel="stylesheet" href="<?php echo PUBLIC_URL('site');?>node_modules/swiper/dist/css/swiper.css">
 
-<title>Shop</title>
+<title><?php echo $title;?></title>

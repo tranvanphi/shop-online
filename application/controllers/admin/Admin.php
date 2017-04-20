@@ -186,7 +186,8 @@ Class Admin extends MY_Controller
 		if($this->session->userdata('login'))
 		{
 			$this->session->unset_userdata('login');
-		}redirect(Admin_url('login'));
+		}
+		redirect(Admin_url('login'));
 	}
 
 	

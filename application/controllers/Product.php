@@ -72,14 +72,14 @@ Class Product extends MY_Controller
         $this->data['productList'] = $this->Product_model->getProductListWhere($config["per_page"], $this->data['page'], $where);
         
         $this->data['pagination_cre'] = $this->pagination->create_links();
-				
+		
+		$this->data['title'] = 'Danh sách sản phẩm';		
 		$this->data['temp']	= 'site/product/catalog';
 		$this->load->view('site/layout', $this->data);
 	}
 
 	function search()
 	{
-       	$this->data['title'] = 'tim san pham';
         
         $search = $this->input->post('key-search');
 
@@ -122,6 +122,7 @@ Class Product extends MY_Controller
         $this->data['pagination_cre'] = $this->pagination->create_links();
 
         //load view
+        $this->data['title'] 		= "Tìm sản phẩm ".$search;
        	$this->data['temp'] = 'site/product/search';
 		$this->load->view('site/layout', $this->data);
 	}
@@ -138,6 +139,7 @@ Class Product extends MY_Controller
 		{
 			redirect();
 		}	
+		$nameProduct = $product[0]->name;
 		$this->data['product'] = $product[0];
 		$imageList = json_decode($product[0]->image_list);
 		$this->data['imageList'] =$imageList; 
@@ -157,6 +159,7 @@ Class Product extends MY_Controller
 		$where = array('view' => $numview);
 		$this->Product_model->updateProduct($id,$where);
 
+		$this->data['title'] 		= $nameProduct;
 		$this->data['temp']	= 'site/product/view';
 		$this->load->view('site/layout', $this->data);
 	}

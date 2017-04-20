@@ -8,7 +8,6 @@
          </div>
          <div class="content-catalog">
             <ul>
-            <?php //pre($catalogList,false);?>
                 <?php foreach($catalogList as $r =>  $row):?>
                 <li class="catalog-parent"><a href="<?php echo base_url('product/catalog/').$row->id;?>"><p><?php echo $row->name;?></p></a>
                 <?php if(!empty($row->subs)):?>

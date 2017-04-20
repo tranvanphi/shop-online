@@ -10,11 +10,6 @@
 	<body>
 		<div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed">
 
-			<!-- Side Overlay-->
-            <aside id="side-overlay">
-            	<?php $this->load->view('admin/side-overlay/index');?>
-            </aside>
-
             <!-- Sidebar -->
             <nav id="sidebar">
             	<?php $this->load->view('admin/sidebar/index');?>

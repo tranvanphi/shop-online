@@ -80,6 +80,7 @@ Class Home extends MY_Controller
 		$message = $this->session->flashdata('message');
         $this->data['message'] = $message;
         
+        $this->data['title'] 		= 'Trang chủ';
 		$this->data['temp']	= 'site/home/index';
 		$this->load->view('site/layout', $this->data);
 	}

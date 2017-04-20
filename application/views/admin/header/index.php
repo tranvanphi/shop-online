@@ -7,44 +7,13 @@
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu dropdown-menu-right">
-                <li class="dropdown-header">Profile</li>
                 <li>
-                    <a tabindex="-1" href="base_pages_inbox.html">
-                        <i class="si si-envelope-open pull-right"></i>
-                        <span class="badge badge-primary pull-right">3</span>Inbox
-                    </a>
-                </li>
-                <li>
-                    <a tabindex="-1" href="base_pages_profile.html">
-                        <i class="si si-user pull-right"></i>
-                        <span class="badge badge-success pull-right">1</span>Profile
-                    </a>
-                </li>
-                <li>
-                    <a tabindex="-1" href="javascript:void(0)">
-                        <i class="si si-settings pull-right"></i>Settings
-                    </a>
-                </li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Actions</li>
-                <li>
-                    <a tabindex="-1" href="base_pages_lock.html">
-                        <i class="si si-lock pull-right"></i>Lock Account
-                    </a>
-                </li>
-                <li>
-                    <a tabindex="-1" href="base_pages_login.html">
-                        <i class="si si-logout pull-right"></i>Log out
+                    <a tabindex="-1" href="<?php echo Admin_url('admin/logout');?>">
+                        <i class="si si-logout pull-right"></i>Thoát
                     </a>
                 </li>
             </ul>
         </div>
-    </li>
-    <li>
-        <!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
-        <!-- <button class="btn btn-default" data-toggle="layout" data-action="side_overlay_toggle" type="button">
-            <i class="fa fa-tasks"></i>
-        </button> -->
     </li>
 </ul>
 <!-- END Header Navigation Right -->
@@ -63,19 +32,5 @@
             <i class="fa fa-ellipsis-v"></i>
         </button>
     </li>
-
-    <li class="visible-xs">
-        <!-- Toggle class helper (for .js-header-search below), functionality initialized in App() -> uiToggleClass() -->
-        <button class="btn btn-default" data-toggle="class-toggle" data-target=".js-header-search" data-class="header-search-xs-visible" type="button">
-            <i class="fa fa-search"></i>
-        </button>
-    </li>
-    <li class="js-header-search header-search">
-        <form class="form-horizontal" action="base_pages_search.html" method="post">
-            <div class="form-material form-material-primary input-group remove-margin-t remove-margin-b">
-                <input class="form-control" type="text" id="base-material-text" name="base-material-text" placeholder="Search..">
-                <span class="input-group-addon"><i class="si si-magnifier"></i></span>
-            </div>
-        </form>
-    </li>
+    
 </ul>
