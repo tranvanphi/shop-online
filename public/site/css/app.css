@@ -601,10 +601,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* line 45, ../sass/layout/_header.scss */
 #page-header .top-header .cart {
-  background-color: #94d3eb;
+  border: 2px solid #fff;
   font-weight: 600;
-  font-size: 15px;
-  color: #cca300;
+  font-size: 16px;
+  color: #fff;
 }
 /* line 53, ../sass/layout/_header.scss */
 #page-header .navbar-default-custom {
